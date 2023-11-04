@@ -15,7 +15,7 @@ public class RegisterController {
 	@Autowired
 	UserService userService;
 
-	@GetMapping("/registro")
+	@GetMapping("/registro") 
 	public String registroHTML() {
 		return "registro";
 	}
@@ -33,7 +33,7 @@ public class RegisterController {
 		user.setPassword(password);
 		user.setName(name);
 		user.setLastName(lastname);
-		user.setPhoneNumber(phoneNumber);
+		user.setPhoneNumber(phoneNumber.replaceAll(" ", ""));
 		userService.addUser(user);
 	
 		

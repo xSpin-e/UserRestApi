@@ -2,18 +2,16 @@
 <html>
 <head>
     <title>Formulario de Datos</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
-    <h1>Formulario de Datos</h1>
+    <h1>Registro de Usuario</h1>
     <form action="/enviar-datos" method="post">
         <label for="usuario">Usuario:</label>
         <input type="text" id="username" name="username" required><br><br>
 
         <label for="email">Correo:</label>
         <input type="email" id="email" name="email" required><br><br>
-
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="password" name="password" required><br><br>
 
         <label for="nombre">Nombre:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -24,8 +22,25 @@
         <label for="telefono">Número de Teléfono:</label>
         <input type="tel" id="phonenumber" name="phonenumber" required><br><br>
 
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="checkbox" id="mostrarContrasena"> Mostrar Contraseña
+        <br><br>
+		<p>Prefiero <a href="/login">iniciar sesión</a></p>
         <input type="submit" value="Enviar">
     </form>
+
+    <script>
+        const mostrarContrasena = document.getElementById('mostrarContrasena');
+        const contrasena = document.getElementById('password');
+
+        mostrarContrasena.addEventListener('change', () => {
+            contrasena.type = mostrarContrasena.checked ? 'text' : 'password';
+        });
+    </script>
 </body>
 </html>
+
+
 

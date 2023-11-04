@@ -1,0 +1,76 @@
+/* Resetear estilos predeterminados del navegador */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 92.5%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: left;
+}
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para campos requeridos */
+input:required {
+    border-color: #e74c3c;
+}
+
+/* Estilo para campos requeridos */
+input:required {
+    border-color: #000; /* Cambiar el color del borde a negro (#000) para campos requeridos */
+}
+
+/* Estilo para mensajes de validación */
+input:invalid {
+    border-color: #000; /* Cambiar el color del borde a negro (#000) para campos inválidos */
+}
+
+
